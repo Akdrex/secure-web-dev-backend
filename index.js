@@ -8,12 +8,17 @@ require("./src/authentication/local.strategy");
 require("./src/authentication/jwt.strategy");
 const passport = require("passport");
 
+const cors = require('cors');
+
+
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
 
-// Protect all /locations route with JWT Authentication
+app.use(cors({
+  origin : "*"
+}));
 app.use(
   "/locations",
   passport.authenticate("jwt", { session: false }),

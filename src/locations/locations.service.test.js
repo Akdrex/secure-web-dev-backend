@@ -11,7 +11,7 @@ test("Should get all locations", async () => {
 });
 
 describe("Location FindOne", () => {
-  it("Should find a location", async () => {
+  it("Should find a locations", async () => {
     const mockLocation = { _id: "639835cd66d2e8465807e711" };
     locationsModel.findById.mockResolvedValue(mockLocation);
     expect(locationsModel.findById).toHaveBeenCalledTimes(1);
