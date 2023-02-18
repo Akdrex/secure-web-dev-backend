@@ -17,7 +17,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: '*'
+  origin: 'https://secure-web-dev-frontend-two.vercel.app'
 }));
 app.use(
   "/locations",
