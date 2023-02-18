@@ -17,7 +17,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin : "*"
+  origin : '*'
 }));
 app.use(
   "/locations",
